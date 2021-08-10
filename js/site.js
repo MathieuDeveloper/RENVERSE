@@ -1,4 +1,5 @@
-//Call Hello World
-function helloWorld() {
-    alert("Hello World !");
-}
+//get the string from page
+
+//reverse the string
+
+//display the string to user
