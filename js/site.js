@@ -1,12 +1,12 @@
 //get the string from page, call functions
 //controller function
 function getValue() {
+    let reverseString = [];
     let userString = document.getElementById("userString").value;
-
     document.getElementById("alert").classList.add("invisible");
-
-    function reverseValue(userString);
-    function displayValue(reverseString);
+    
+    reverseString = reverseValue(userString);
+    displayValue(reverseString);
 }
 
 
@@ -24,5 +24,5 @@ function reverseValue(userString) {
 //view function
 function displayValue(reverseString) {
     document.getElementById("alert").classList.remove("invisible");
-    document.getElementById("msg").innerHTML = `Your string reversed is:${reverseString}`;
+    document.getElementById("msg").innerHTML = `Your string reversed is: ${reverseString}`;
 }
