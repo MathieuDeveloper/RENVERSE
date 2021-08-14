@@ -60,17 +60,46 @@
 
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        //Call Hello World
-                        function helloWorld() {
-                             alert("Hello World !");
-                        }
+//controller function
+function getValue() {
+    let reverseString = [];
+    let userString = document.getElementById("userString").value;
+    document.getElementById("alert").classList.add("invisible");
+    
+    reverseString = reverseValue(userString);
+    displayValue(reverseString);
+}
+
+//logic function
+function reverseValue(userString) {
+    let reverseString = [];
+    for (let index = userString.length -1; index >= 0; index--) {
+        reverseString += userString[index];
+    }
+    return reverseString;
+}
+
+//view function
+function displayValue(reverseString) {
+    document.getElementById("alert").classList.remove("invisible");
+    document.getElementById("msg").innerHTML = `Your string reversed is: ${reverseString}`;
+}
                 </code>
             </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structured in one function.</p>
-                    <h5>Hello World !</h5>
-                    <p>Hello Wolrd is a functon that displays an alert with the message Hello World !</p>
+                    <p>Le code est structuré en trois fonctions.</p>
+                    <h5>1) getValue</h5>
+                    <p>getValue récupère la variable string de l'utilisateur.<br>
+                        getValue appelle les autres fonctions.
+                    </p>
+                    <h5>2) reverseValue</h5>
+                    <p>reverseValue inverse la variable string de l'utilisateur via une boucle.
+                    </p>
+                    <h5>3) displayValue</h5>
+                    <p>Rend la message d'alerte visible<br>
+                       Insère dans la page web le texte inversé.
+                    </p>
                 </div>
             </div>
         </div>
